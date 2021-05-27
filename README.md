@@ -1,11 +1,3 @@
-# Environments
-
-```sh
-DB_USERNAME=
-DB_PASSWORD=
-DB_DATABASE=
-DB_HOST=
-DB_PORT=
-PORT=
-JWT_SECRET=
-```
+#Presente 
+Back-end realizado com Node.js utilizando a ORM Sequelize
+DB PostgresSQL
