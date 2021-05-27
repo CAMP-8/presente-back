@@ -30,6 +30,7 @@ Student.init(
     },
     password: {
       type: DataTypes.STRING,
+      registration_type: DataTypes.ENUM('email', 'google', 'facebook'),
       allowNull: false,
     },
     locationState: {
