@@ -35,9 +35,7 @@ module.exports = {
       return res.status(StatusCodes.CREATED).json(user.toJSON());
     } catch (error) {
       console.error(error);
-      return res
-        .status(
-          error.name == "ValidationError"
+      return res.status(error.name == "ValidationError"
             ? StatusCodes.UNPROCESSABLE_ENTITY
             : error.status || StatusCodes.INTERNAL_SERVER_ERROR
         )

@@ -13,7 +13,7 @@ module.exports.signin = async (email, password) => {
   if (!user) {
     throw {
       status: StatusCodes.NOT_FOUND,
-      message: messages.notFound("user"),
+      message: messages.notFound,
     };
   }
 
@@ -39,6 +39,6 @@ module.exports.signin = async (email, password) => {
   user.setDataValue('token', token);
   await usersRepository.update(user);
 
-  return { email, token, name: user.name, id: user.id };
+  return { email, token, name: user.name};
   
 };

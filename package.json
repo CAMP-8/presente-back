@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/diogo26/camp-21.git"
+    "url": "git+https://github.com/CAMP-8/presente-back.git"
   },
-  "author": "Diogo",
+  "author": "Matheus Augusto Moreira",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/diogo26/camp-21/issues"
+    "url": "https://github.com/CAMP-8/presente-back/issues"
   },
-  "homepage": "https://github.com/diogo26/camp-21#readme",
+  "homepage": "https://github.com/CAMP-8/presente-back/presente-back#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "bcryptjs": "^2.4.3",
@@ -33,5 +33,8 @@
   "devDependencies": {
     "nodemon": "^2.0.7",
     "sequelize-cli": "^6.2.0"
+  },
+  "engines": {
+    "node": "15.10.0"
   }
 }

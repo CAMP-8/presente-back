@@ -70,7 +70,9 @@ module.exports.signup = async (body) => {
     throw {
       status: StatusCodes.CONFLICT,
       message: messages.emailUnavailable,
+      
     };
+    
   }
 
   return usersRepository.create({
