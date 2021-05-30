@@ -1,27 +1,43 @@
-const Sequelize = require('sequelize');
-const config = require('../config/database/sequelize');
-const Student = require('./student');
-const Company = require('./company');
-const Tutor = require('./tutor');
-const TutorbyCompany = require('./tutorbycompany');
+const fs = require("fs");
+const path = require("path");
+const Sequelize = require("sequelize");
 
-Company.belongsToMany(Person, { through: TutorbyCompany, foreignKey: 'companyId' });
-Tutor.belongsToMany(Company, {
-  through: TutorbyCompany,
-  foreignKey: 'tutorId',
-  as: 'company',
-});
+const basename = path.basename(__filename);
+const config = require("../config/database/sequelize");
+
+const db = {};
 
 const sequelize = new Sequelize(
   config.database,
   config.username,
   config.password,
-  config,
+  {
+    ...config,
+    logging: false,
+  }
 );
 
-module.exports = {
-  sequelize,
-  Company,
-  Tutor,
-  Student,
-};
+fs.readdirSync(__dirname)
+  .filter((file) => {
+    return (
+      file.indexOf(".") !== 0 && file !== basename && file.slice(-3) === ".js"
+    );
+  })
+  .forEach((file) => {
+    const model = require(path.join(__dirname, file))(
+      sequelize,
+      Sequelize.DataTypes
+    );
+    db[model.name] = model;
+  });
+
+Object.keys(db).forEach((modelName) => {
+  if (db[modelName].associate) {
+    db[modelName].associate(db);
+  }
+});
+
+db.sequelize = sequelize;
+db.Sequelize = Sequelize;
+
+module.exports = db;

@@ -1,4 +1,9 @@
-const login = require('./login');
-const logout = require('./logout');
+const { signin } = require("./signin.service");
+const  { logout }  = require("./logout.service");
+const { signup } = require("./signup.service");
 
-module.exports = { login, logout };
+module.exports = {
+  signup,
+  signin,
+  logout,
+};

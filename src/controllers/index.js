@@ -1,11 +1,7 @@
-const bookController = require('./book');
-const personController = require('./person');
-const authController = require('./auth');
-const orderController = require('./order');
+const usersController = require("./users.controller");
+const authController = require("./auth.controller");
 
 module.exports = {
-  bookController,
-  personController,
+  usersController,
   authController,
-  orderController,
 };

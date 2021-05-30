@@ -1,3 +1,7 @@
-const buildResponse = require('./buildResponse');
+const { messages } = require("./messages");
+const { encryptor } = require("./encryptor");
 
-module.exports = { buildResponse };
+module.exports = {
+  messages,
+  encryptor,
+};

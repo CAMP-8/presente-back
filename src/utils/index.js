@@ -1,3 +1,5 @@
-const ERRORS = require('./errors');
+const constants = require("./constants");
 
-module.exports = { ERRORS };
+module.exports = {
+  constants,
+};
