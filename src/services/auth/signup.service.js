@@ -30,8 +30,9 @@ module.exports.signup = async (body) => {
         "Homem cis",
         "Homem trans",
         "Mulher trans",
+        "Travesti",
         "Não binário",        
-        "Prefiro não responder",
+        "Prefiro não responder",        
         "Outros",
       ])
       .required(),
