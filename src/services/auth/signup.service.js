@@ -30,8 +30,7 @@ module.exports.signup = async (body) => {
         "Homem cis",
         "Homem trans",
         "Mulher trans",
-        "Não binário",
-        "Não sei responder",
+        "Não binário",        
         "Prefiro não responder",
         "Outros",
       ])
@@ -47,7 +46,9 @@ module.exports.signup = async (body) => {
         "Homossexual",
         "Bissexual",
         "Panssexual",
-        "Assexual",       
+        "Assexual",
+        "Prefiro não responder",
+        "Outros",      
       ])
       .required(),
     password: yup.string().required(),

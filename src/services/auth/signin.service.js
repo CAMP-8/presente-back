@@ -39,6 +39,6 @@ module.exports.signin = async (email, password) => {
   user.setDataValue('token', token);
   await usersRepository.update(user);
 
-  return { email, token, name: user.name};
+  return { email, token, name: user.name, interests: user.interests};
   
 };
