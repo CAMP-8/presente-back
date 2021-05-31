@@ -4,7 +4,7 @@ const routes = require("../../routes");
 const { port } = require("../env");
 const cors = require('cors');
 
-app.use(cors());
+app.use(cors({origin: 'https://presente-camp.vercel.app/'}));
 
 
 app.set("port", port || 3000);
