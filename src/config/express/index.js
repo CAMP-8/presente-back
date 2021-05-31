@@ -5,10 +5,10 @@ const { port } = require("../env");
 const cors = require('cors');
 
 app.use(cors({
-    origin: "'https://presente-camp.vercel.app/'",
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-    preflightContinue: false,
-    optionsSuccessStatus: 204
+    "origin": "https://presente-camp.vercel.app",
+    "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+    "preflightContinue": false,
+    "optionsSuccessStatus": 204
   }));
 
 
